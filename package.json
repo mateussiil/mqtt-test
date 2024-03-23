@@ -1,4 +1,8 @@
 {
+  "name": "scalable-mqtt-app",
+  "version": "1.0.0",
+  "description": "Scalable mqtt app.",
+  "author": "Mateus Silva",
   "scripts": {
     "start": "ts-node src/app.ts",
     "start:worker": "ts-node src/worker.ts"
