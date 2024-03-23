@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  # app:
+  #   build: .
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - mqtt-broker
+  #     - rabbitmq
+
+  mqtt-broker:
+    image: emqx/emqx:5.5.1
+    ports:
+      - "1883:1883"
+      - "8083:8083"
+      - "8084:8084"
+      - "8883:8883"
+      - "18083:18083"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"  # Porta para acessar o RabbitMQ
+      - "15672:15672"  # Porta para acessar o painel de administração do RabbitMQ
+
+  mqttx-web:
+    image: emqx/mqttx-web
+    ports:
+      - "80:80"

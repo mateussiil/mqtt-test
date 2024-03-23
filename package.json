@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "ts-node src/app.ts",
+    "start:worker": "ts-node src/worker.ts"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "mqtt": "^5.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.10.5"
+  }
+}
